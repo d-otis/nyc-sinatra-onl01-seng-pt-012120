@@ -18,10 +18,10 @@
 		  </div>
 		  <div class="list-group list-group-flush">
 		  	<% @figure.landmarks.each do |landmark| %>
-		    <a href="/landmarks/<%= landmark.id %>" class="list-group-item list-group-item-action"><%= landmark.name %> &mdash; <%= landmark.year_completed %></a>
+		    <a href="/landmarks/<%= landmark.slug %>" class="list-group-item list-group-item-action"><%= landmark.name %> &mdash; <%= landmark.year_completed %></a>
 		    <% end %>
 		  </div>
 		</div>
 	</div>
-	<a class="btn btn-outline-secondary btn-block mt-2" href="/figures/<%= @figure.id %>/edit">Edit Figure</a>
+	<a class="btn btn-outline-secondary btn-block mt-2" href="/figures/<%= @figure.slug %>/edit">Edit Figure</a>
 </div>
