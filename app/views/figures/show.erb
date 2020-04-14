@@ -1,0 +1,27 @@
+<div class="col-sm-8 offset-sm-2">
+	<h3 class="text-center"><%= @figure.name %></h3>
+	<div class="card-group">
+		<div class="card" style="">
+		  <div class="card-header" style="background-color: #FFCBF1;">
+		    Titles
+		  </div>
+		  <ul class="list-group list-group-flush">
+		  	<% @figure.titles.each do |title| %>
+		    <li class="list-group-item list-group-item-action"><%= title.name %></li>
+		    <% end %>
+		  </ul>
+		</div>
+
+		<div class="card">
+		  <div class="card-header" style="background-color: #FFCBF1;">
+		    Landmarks
+		  </div>
+		  <div class="list-group list-group-flush">
+		  	<% @figure.landmarks.each do |landmark| %>
+		    <a href="/landmarks/<%= landmark.id %>" class="list-group-item list-group-item-action"><%= landmark.name %> &mdash; <%= landmark.year_completed %></a>
+		    <% end %>
+		  </div>
+		</div>
+	</div>
+	<a class="btn btn-outline-secondary btn-block mt-2" href="/figures/<%= @figure.id %>/edit">Edit Figure</a>
+</div>

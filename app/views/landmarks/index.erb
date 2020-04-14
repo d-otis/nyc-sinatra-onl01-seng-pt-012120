@@ -1,6 +1,10 @@
-<h2>All Historical Landmarks</h2>
+<div class="col-sm-6 offset-sm-3">
 
-<!-- add content here -->
+	<div class="list-group text-center">
+		<h4>List of Historial Landmarks:</h4>
+		<% @landmarks.each do |landmark| %>
+		<a href="/landmarks/<%= landmark.id %>" class="list-group-item list-group-item-action"><%= landmark.name %></a>
+		<% end %>
+	</div>
+</div>
 
-<a class="button" href="/figures">Figures</a>
-<a class="button" href="/">Home</a>

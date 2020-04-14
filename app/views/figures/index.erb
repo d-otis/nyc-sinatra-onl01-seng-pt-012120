@@ -1,0 +1,10 @@
+<div class="col-sm-6 offset-sm-3">
+
+	<div class="list-group text-center">
+		<h4>List of Historial Figures:</h4>
+		<% @figures.each do |figure| %>
+		<a href="/figures/<%= figure.id %>" class="list-group-item list-group-item-action"><%= figure.name %></a>
+		<% end %>
+	</div>
+</div>
+

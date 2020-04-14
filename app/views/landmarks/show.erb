@@ -1,13 +1,22 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<div class="col-sm-8 offset-sm-2">
+	<div class="card-group">
+		<div class="card" style="">
+		  <div class="card-header" style="background-color: #FFCBF1;">
+		    Landmark
+		  </div>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item list-group-item-action"><%= @landmark.name %></li>
+		  </ul>
+		</div>
 
-<a class="button" href="/landmarks/<%= @landmark.id %>/edit">Edit Landmark</a>
-<a class="button" href="/landmarks">Landmarks</a>
+		<div class="card">
+		  <div class="card-header" style="background-color: #FFCBF1;">
+		    Year Completed
+		  </div>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item list-group-item-action"><%= @landmark.year_completed %></li>
+		  </ul>
+		</div>
+	</div>
+	<a class="btn btn-outline-secondary btn-block mt-2" href="/landmarks/<%= @landmark.id %>/edit">Edit Landmark</a>
+</div>
